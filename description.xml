@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Files>
+	<File pattern="CEMS*.csv" fieldCount="158" skipRows="1" separator=","/>
+	<File pattern="*CVASCALE.csv" fieldCount="3" skipRows="1" separator=",">
+		<Fields>
+			<Field fieldIndex="1" sampleDate="01/01/2015" dateFormat="%d/%m/%y" altFormat="%d/%m/%Y"/>
+		</Fields>
+	</File>
+	<File pattern="REGMI_SECURITY_USER.csv" skipRows="1" fieldCount="16">
+		<Fields>
+			<Field fieldIndex="3" pattern="\d{2}(\.|/)\d{2}(\.|/)\d{4}"/>
+		</Fields>
+	</File>
+	<File pattern="DEFAULTCC.csv" fieldCount="4" separator="," skipRows="1"/>
+	<File pattern="LEGAL_ENTITY.csv" separator="," fieldCount="12" skipRows="1"/>
+	<File pattern="*EXPOSURE_TYPE_GROUPINGS.csv" separator="," skipRows="1" fieldCount="6"/>
+	<File pattern="*CCMAPPINGEXTRA.csv" skipRows="1" separator="," fieldCount="11"/>
+	<File fieldCount="3" pattern="*TRADE_DATES.csv" separator="," skipRows="1">
+		<Fields>
+			<Field fieldIndex="2" dateFormat="%Y-%m-%d %H:%M:%S"/>
+        </Fields>
+	</File>
+	<File fieldCount="1" pattern="*CORPORATE_SDSIDS.csv" skipRows="1" separator=",">
+		<Fields>
+			<Field pattern="[0-9]+" fieldIndex="1"/>
+		</Fields>
+	</File>
+	<File pattern="ICV[IU]*.csv" separator="," skipRows="1" fieldCount="101">
+		<Fields>
+			<Field fieldIndex="5" dateFormat="%d/%m/%Y %H:%M"/>
+        </Fields>
+	</File>
+	<File pattern="MODELLED-SCALED-RWA-S*.csv" separator="|" skipRows="1" fieldCount="71">
+		<Fields>
+			<Field dateFormat="%d/%m/%Y %H:%M" fieldIndex="5" altFormat="%d/%m/%Y" sampleDate="01/01/2015 12:00"/>
+        </Fields>
+	</File>
+	<File pattern="CVA-CHARGE?*.csv" separator="|" skipRows="1" fieldCount="75">
+		<Fields>
+			<Field fieldIndex="9" dateFormat="%d/%m/%Y %H:%M" altFormat="%d/%m/%Y" sampleDate="01/01/2015 12:00 or 01/01/2015"/>
+        </Fields>
+	</File>
+	<File pattern="EXPOSURE_CVA_TRADELEVEL_B3?_*.dat" separator="|" skipRows="1" fieldCount="9"/>
+	<File pattern="LR_FULL*.csv" separator="," skipRows="1" fieldCount="43">
+		<Fields>
+			<Field fieldIndex="15" dateFormat="%d/%m/%Y %H:%M" sampleDate="01/01/2015 12:00"/>
+        </Fields>
+	</File>
+    <File pattern="REGMI_DATA_EXTRACT.txt" skipRows="1" fieldCount="117"/>
+    <!--<File pattern="HierarchyRename.csv" fieldCount="2" skipRows="1">-->
+    <File pattern="Reporting_Fields.csv" fieldCount="14" separator="," skipRows="1"/>
+    <File pattern="Regmi_status.csv" fieldCount="7" skipRows="1" separator=",">
+        <Fields>
+            <Field fieldIndex="1" dateFormat="%Y%m%d" sampleDate="20150101"/>
+        </Fields>
+    </File>
+    <File pattern="ETDMapping.csv" fieldCount="2" skipRows="1" separator=",">
+        <Fields>
+            <Field fieldIndex="2" pattern="[0-9]+"/>
+        </Fields>
+    </File>
+    <File pattern="Pick_Dimensions_and_Metrics.csv" fieldCount="7" skipRows="1" separator=","/>
+    <File pattern="Risk_Type_Groupings_for_RWA_MI.csv" fieldCount="6" skipRows="1" separator=","/>
+</Files>
